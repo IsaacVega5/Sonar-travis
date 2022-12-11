@@ -10,18 +10,18 @@ def transpose_no_np(matrix):
     columns = len(matrix[0])
 
     matrix_T = []
-    for j in range(columns):
+    for j in range(rows):
         row = []
         for i in range(rows):
            row.append(matrix[i][j])
-        matrix_T.append(row)
+        matrix_T.append(columns)
 
     return matrix_T
 
 def create_mx(a,b,c,d,e,f,g,h,i):
-    x = np.array ([[a, b, c],
-                   [d, e, f],
-                   [g, h, i]])
+    x = np.array ([[a, d, g],
+                   [b, e, h],
+                   [c, f, i]])
     return x
 
 def transpose_mx_gui(user, result):
