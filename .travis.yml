@@ -2,5 +2,13 @@ language: python
 python:
   - "3.9.10"
 
+addons:
+  sonarcloud:
+    organization: "isaacvega5"
+    token:
+      secure: "vbawoagGaA29QulhMflO2tsv63CuI7DaQT8UErLsIRN2GA7pVaHW4tKVRcAMjP4wOJgXhxtIo9pzT/Oh/CGgRo4Rxeh4reHw7CT1tQs27/umr39sxAb4y3CqhVYOsU2xpN95RyjEMliyHOA8drqNWLaqv4vpQiF4GPm5/XEudtjfXaOLhwOrRLSYCQ0EdAr1OVW+DsPDzoHz5CVX3pRV7D6tm+46uyZmc+GtWbOo1qTfvh1fLivFT1fopBoY9I1/L43V6DTRKQbVZUf18eghe7tuvSyP875x0PJMX2iAbR0KjG1Fc91Ts6Ey4zlTae+6oVDb9LdUrQbUJR0A9LQbQJY/AYUH3dCbsUWsUWE8jHmu/ZrXrhQLlMdqBr3aGM89blC4qDM96/IVbEqqKkjKYFak3DZadBIOZecjZsYN1cG9rMT3/sYzBfWSOx6ggG49UOYYZZB4YYZWQzEKB1qFARnfZUw5cEEGgr3y4hhNlGSpdMv7KUj2qNMc7RxwcRkDWYBdDQH1PpDuc6McAXxyAuOyPVJ4gUW7tpuuU+TF0/1UcOZsWP4Tu7NwF5qpdPHjaXpzO0ZPulZgHS1A4xXub5acQJbGAG89PgGvxknENXS4acAcunkg6HKpzJpvaDVrcF/gw+sX2y1sjVJMs8XCDJLlwVbWAprkjxsc/A8mcK4="
+
+
 script:
   - python -m unittest discover -s tests
+  - sonar-scanner
