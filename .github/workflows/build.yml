@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - Codigo-bueno
+      - Codigo-malo
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
