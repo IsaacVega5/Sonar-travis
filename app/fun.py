@@ -6,17 +6,17 @@ def transpose_np(x):
     return y
 
 def transpose_no_np(matrix):
-    rows = len(matrix)
-    columns = len(matrix[0])
+    # rows = len(matrix)
+    # columns = len(matrix[0])
 
-    matrix_T = []
-    for j in range(columns):
-        row = []
-        for i in range(rows):
-           row.append(matrix[i][j])
-        matrix_T.append(row)
+    # matrix_T = []
+    # for j in range(columns):
+    #     row = []
+    #     for i in range(rows):
+    #        row.append(matrix[i][j])
+    #     matrix_T.append(row)
 
-    return matrix_T
+    # return matrix_T
 
 def create_mx(a,b,c,d,e,f,g,h,i):
     x = np.array ([[a, b, c],
